@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Processar recorrencias</title>
+    <script src="objects.js" ></script>
+    <script>
+        // - Buscar os usuario selecionados para aquele parceiro.
+        // - Inserir usuarios em um state usersPartener.
+        // - Exibir os usuarios pre selecionados dentro de uma chip oculta.
+        // - Ao clicar sobre o icone que indica a quantidade de usuario preselecionados, sera exibida as opcoes de usuarios para aquele parceiro.
+        // - Caso exista 1 usuario, ele estara pre selecionado para a recorrencia daquele dia.
+        // - Caso exista mais de um usuario nennhum será pre selecionado. O usuario devera selecionar dentre os disponiveis.
+        // - Ao clicar sobre os icones, todos usuarios do parceiro serão exibidos. Será pre-selecionado somente os que ja possuem visita aquela loja.
+        // - A tabela de usuarios sera atualizada a medida que os usuarios são selecionados para a visita.
+        //console.log("recurrences: ", recurrences);
+        //console.log("recurrenceByCustomerGroup: ", recurrenceByCustomerGroup);
+        //console.log("recorrencias por cliente/ usuarios: ", teste );
+
+
+        var recurrenceByCustomerAndUsers = [];
+        
+        recurrenceByCustomerGroup.map(recurrence => {
+            //console.log('recurrence: ', recurrence);
+            var exist = recurrenceByCustomerAndUsers.findIndex(x => x.Id == recurrence.Id );
+            //recurrenceByCustomerAndUsers.findIndex(x => x.Id == recurrence.Id && x.Days.find(x => x.userId == recurrence.UserId) );
+            
+            var row = {};
+            row.Id = recurrence.Id;
+            row.Customer = recurrence.Name;
+            row.Days = []
+
+            
+            if(recurrence.FrequencyInDays.length > 0){
+                    
+                recurrence.FrequencyInDays.map(day => {
+                    row.Days.push({ 
+                        day: day,
+                        user: recurrence.User,
+                        userId: recurrence.UserId
+                    })
+                })
+            }
+
+            if(exist < 0)
+            {
+                recurrenceByCustomerAndUsers.push(row);
+            }
+            else
+            {             
+                //console.log('row: ', row.Days);
+                if(!recurrenceByCustomerAndUsers[exist].Days)
+                    recurrenceByCustomerAndUsers[exist].Days = [];
+                
+                row.Days.map(day => {
+                    console.log('recurrence: ', recurrenceByCustomerAndUsers[exist].Days)
+                    console.log('day: ', recurrenceByCustomerAndUsers[exist].Days)
+
+                    var existInRecurrenceByCustomerAndUser = recurrenceByCustomerAndUsers[exist].Days.find(x => x.userId == day.userId);
+                    if(existInRecurrenceByCustomerAndUser < 0){
+                        recurrenceByCustomerAndUsers[exist].Days.push(day);
+                    }
+                })  
+
+                // row.Days.map(day => {
+                //     var existUser = recurrenceByCustomerAndUsers[exist].Days.findIndex(x => x.userId == day.userId && x.day == day.day)
+                //     if(existUser < 0)
+                //         recurrenceByCustomerAndUsers[exist].Days.push(day)    
+                // })
+            }
+            // recurrenceByCustomerAndUsers.map(recurrence => {
+            //     recurrence.Days.map(item =>{
+            //         //var itens = recurrence.find(x => x.day == item.day);
+            //         //console.log('itens: ', itens);
+            //     })
+            //     console.log('fim')
+            // })
+        });
+
+
+        console.log('recurrence: ', recurrenceByCustomerAndUsers);
+        
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>POC FCM</title>
+</head>
+<body>
+    <script type="module">
+        //import { initializeApp } from './firebase/app';
+        import { initializeApp } from 'https://www.gstatic.com/firebasejs/9.6.10/firebase-app.js'
+        import { getToken, getMessaging, onMessage} from 'https://www.gstatic.com/firebasejs/9.6.10/firebase-messaging.js';
+
+        //import { onBackgroundMessage } from "./firebase/messaging/sw";
+
+        const firebaseConfig = {
+            apiKey: "AIzaSyBbj270QjXIDDdoQ6TbSx7j1CzlWVYaTPo",
+            authDomain: "poccloudmessage.firebaseapp.com",
+            projectId: "poccloudmessage",
+            storageBucket: "poccloudmessage.appspot.com",
+            messagingSenderId: "52909771649",
+            appId: "1:52909771649:web:7c3b831ad6e038460ab680"
+        };
+
+        const app = initializeApp(firebaseConfig);
+        console.log('app', app);
+        const messaging = getMessaging(app);
+        console.log('messaging', messaging);
+        const publicKey = "BGHo-Jh73YqyadqZar5-2QClfWWQxNaBO-8URFxQOm84nSexZ_3du8D1BRD6rWT6Iq67qa2M9_QODswHbH5-kBU";
+        
+        // if ('serviceWorker' in navigator) {
+        //     navigator.serviceWorker.register('./firebase-messaging-sw.js')
+        //     .then(function(registration) {
+        //         console.log('Registration successful, scope is:', registration.scope);
+        //     }).catch(function(err) {
+        //         console.log('Service worker registration failed, error:', err);
+        //     });
+        // }
+
+
+        getToken(messaging, {vapidKey: publicKey})
+        .then((currentToken) => {
+            console.log('currentToken', currentToken);
+            if(currentToken){
+                document.getElementById('token').innerHTML = currentToken;
+            }
+            else
+            {
+                console.log('else');
+            }
+        }).catch((error) => {
+            console.log('error: ', error);
+        });
+
+        onMessage(messaging, (payload) => {
+             console.log('Message received. ', payload);
+        });
+
+        
+      </script>
+    <div>
+        <p>Token: </p>
+        <p  id="token">
+
+        </p>
+    </div>
+      
+</body>
+</html>

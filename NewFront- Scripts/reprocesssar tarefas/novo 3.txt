@@ -1,0 +1,22 @@
+[
+    {
+        "Id": 1361015,
+        "Code": "Shopping Estacao",
+        "Name": "Shopping Estação"
+    },
+    {
+        "Id": 1411195,
+        "Code": "GOOGLE",
+        "Name": "Google Informática Ltda"
+    },
+    {
+        "Id": 1378422,
+        "Code": "Cliente3",
+        "Name": "Cliente3"
+    },
+    {
+        "Id": 1334249,
+        "Code": "Ed.Mariana",
+        "Name": "Edifício Mariana"
+    }
+]

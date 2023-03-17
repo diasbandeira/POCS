@@ -1,0 +1,86 @@
+#include <strings.ms>
+    #include <parsing.ms>
+    #include <arrays.ms>
+    
+    int i = 0; 
+    int l = 0;
+    int contadorMovimentacao = 0;
+    int Contador = 0;
+    int qtdeMaterialCaixaRep = 0;
+    int qtdMateriaisCaixasLidas = 0;
+    int ListaRegistrosLidos[100] ;
+    int PosiçaoArrayLido = -1;
+    
+    string Acao = "";
+    string mensagem = "";
+    string vMaterialCaixa = "";
+    string LeituraFinal = ""; 
+    string cLocalizacao= "";
+    string rota = "";
+    string TipoLeitura ="";
+    string vMaterialColetados;
+    string listColunasCodigoCaixaRep[100];
+    string listaColunas[100];
+    string listaDadosLidos[100];
+    string listaColunasDadosLidos[100];
+    string CodigoUD = "";
+    string CodigoMaterial = "";
+    string LocalizacaoOrigem = "";
+    string LocalizaçãoDestino ="";
+    string Quantidade="";
+    
+    boolean LeituraTerminada = false;
+    boolean PreencheItensLidos = true;
+    
+    // gera e atualiza a mensagem da caixa de código de barras.
+    void DadosColetados()
+    {
+        int itens = 0;
+        int colunas = 0;
+    
+        mensagem = "";
+       setVarValue("vMaterialCaixa", mensagem ); 
+    
+        while( itens < qtdMateriaisCaixasLidas)
+        {  
+          // Quebra em colunas cada registro
+          colunas  = pb_split(listaDadosLidos[itens], ";", listaColunasDadosLidos); 
+          
+          // Recupera ultimo valor gravado.
+          mensagem = getVarValue("vMaterialCaixa");
+            
+          // Verifica se o registro esta vazio
+          if (listaColunasDadosLidos[0] != "" && ListaRegistrosLidos[ itens ] == 0) 
+          {  
+              if( listaColunasDadosLidos[1] == ""   ) 
+              { 
+                // Monta html informando que é Caixa 
+               mensagem = mensagem + "<b> Mat: "+ listaColunasDadosLidos[0] + " Cx: " +
+                 listaColunasDadosLidos[2]  + " Caixa Fechada </b><br/>";
+              }
+              else
+              { 
+                // Monta html informando que é Localização 
+                 mensagem = mensagem + "<b> Mat: "+ listaColunasDadosLidos[0] + " Lc: " +
+                 listaColunasDadosLidos[1]  + " Caixa Aberta  </b><br/>";
+              }
+              setVarValue("vMaterialCaixa",mensagem); 
+          }        
+         itens = itens + 1;
+        }  
+    }  
+    
+    
+    boolean identificaLocalizacao(string codigolocalizacao)
+    {
+      // Verifica se o codigo da Localização esta correto
+      // Padrao aaaa-aa-aa ex: '101B-02-E
+     // showDialog("Aqui",substring( codigolocalizacao ,4,1 ) + " e " +substring( codigolocalizacao ,7,1 ));
+      if (substring( codigolocalizacao ,4,1 ) == "-" && substring( codigolocalizacao ,7,1 ) == "-")
+      { 
+        return true;
+      } else 
+      {
+        return false;
+      }
+    }    

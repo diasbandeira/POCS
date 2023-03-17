@@ -1,0 +1,32 @@
+{
+   "Recurrence":{
+      "Company":681,
+      "Description":"Belo Horizonte - (G.Q.B)Art Center - M.SSA Novo - ANDRE LUIZ BANDEIRA DIAS - ",
+      "Start":"2022-09-29",
+      "End":"2022-10-08",
+      "Time":"06:00",
+      "Tolerance":"048:00",
+      "Standard":2,
+      "Frequency":"3:0,2,4",
+      "Active":false,
+      "Region":1
+   },
+   "RecurrenceServiceRequest":{
+      "Id":"",
+      "Office":1188,
+      "ServiceRequestType":60438,
+      "ServiceRequestGroup":8080,
+      "ScheduledDate":"10:01",
+      "LimitDate":"048:00",
+      "Observation":"",
+      "SendToDeviceNow":false,
+      "CreatedBy":62604,
+      "ServiceRequestTypeCode":"Feedback PDV Alimentar",
+      "Users":[
+         62604
+      ],
+      "Customers":[
+         1874248
+      ]
+   }
+}

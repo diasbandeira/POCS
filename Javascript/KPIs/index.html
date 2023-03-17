@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Testes KPI</title>
+    <script>
+        const valores = {
+    "multiregisters": [
+        {
+            "codigo": "ea090b34-0076-3e50-1269-6512c921a767",
+            "periodo": "20220811135110",
+            "visita": "FBPDV-2022-679975",
+            "finished": "11/08/2022 14:02:56",
+            "rede": "COELHO DINIZ",
+            "pdv": "COELHO DINIZ DEODORO DA FONSECA - LOJA 19",
+            "cliente": "CASTELODOCAFE-462",
+            "promotor": "ADAIR FLORENCIO DA SILVA",
+            "produto": "CAFE REI DAVI GOURMET CAPSULA C/10",
+            "tipoOcorrencia": "Vencimento menor que 90 dias",
+            "quantidade": "36",
+            "vencimento": "15/10/2022",
+            "precoVarejo": "19,99",
+            "precoAtacado": "19,99",
+            "local": "No Ponto Natural",
+            "acao": "Permaneceu no Ponto Natural"
+        },
+        {
+            "codigo": "8b5fe4c2-b20a-b408-e6f4-b5c8dcfc18d6",
+            "periodo": "20220811135150",
+            "visita": "FBPDV-2022-679975",
+            "finished": "11/08/2022 14:02:56",
+            "rede": "COELHO DINIZ",
+            "pdv": "COELHO DINIZ DEODORO DA FONSECA - LOJA 19",
+            "cliente": "CASTELODOCAFE-462",
+            "promotor": "ADAIR FLORENCIO DA SILVA",
+            "produto": "CAFE REI DAVI CLASSICO CAPSULA C/10",
+            "tipoOcorrencia": "Vencimento menor que 90 dias",
+            "quantidade": "41",
+            "vencimento": "27/10/2022",
+            "precoVarejo": "19,99",
+            "precoAtacado": "19,99",
+            "local": "No Ponto Natural",
+            "acao": "Permaneceu no Ponto Natural"
+        },
+        {
+            "codigo": "294af6eb-5934-4df6-6835-fedc7faacbf0",
+            "periodo": "20220811135255",
+            "visita": "FBPDV-2022-679975",
+            "finished": "11/08/2022 14:02:56",
+            "rede": "COELHO DINIZ",
+            "pdv": "COELHO DINIZ DEODORO DA FONSECA - LOJA 19",
+            "cliente": "CASTELODOCAFE-462",
+            "promotor": "ADAIR FLORENCIO DA SILVA",
+            "produto": "CAFE SALOMAO ESPECIAL CAPSULA C/10",
+            "tipoOcorrencia": "Vencimento menor que 90 dias",
+            "quantidade": "68",
+            "vencimento": "27/10/2022",
+            "precoVarejo": "21,99",
+            "precoAtacado": "21,99",
+            "local": "No Ponto Natural",
+            "acao": "Permaneceu no Ponto Natural"
+        },
+        {
+            "codigo": "7c3d591e-e303-737b-f7cf-e9093313b59b",
+            "periodo": "20220811135345",
+            "visita": "FBPDV-2022-679975",
+            "finished": "11/08/2022 14:02:56",
+            "rede": "COELHO DINIZ",
+            "pdv": "COELHO DINIZ DEODORO DA FONSECA - LOJA 19",
+            "cliente": "CASTELODOCAFE-462",
+            "promotor": "ADAIR FLORENCIO DA SILVA",
+            "produto": "CAFE SALOMAO BOURBON CAPSULA C/10",
+            "tipoOcorrencia": "Vencimento menor que 90 dias",
+            "quantidade": "26",
+            "vencimento": "26/10/2022",
+            "precoVarejo": "21,99",
+            "precoAtacado": "21,99",
+            "local": "No Ponto Natural",
+            "acao": "Permaneceu no Ponto Natural"
+        },
+        {
+            "codigo": "ae05f677-d071-6f37-88ea-b7e17a4754b2",
+            "periodo": "20220811135428",
+            "visita": "FBPDV-2022-679975",
+            "finished": "11/08/2022 14:02:56",
+            "rede": "COELHO DINIZ",
+            "pdv": "COELHO DINIZ DEODORO DA FONSECA - LOJA 19",
+            "cliente": "CASTELODOCAFE-462",
+            "promotor": "ADAIR FLORENCIO DA SILVA",
+            "produto": "CAFE SALOMAO CAPARAO CAPSULA C/10",
+            "tipoOcorrencia": "Vencimento menor que 90 dias",
+            "quantidade": "40",
+            "vencimento": "14/10/2022",
+            "precoVarejo": "27,99",
+            "precoAtacado": "27,99",
+            "local": "No Ponto Natural",
+            "acao": "Permaneceu no Ponto Natural"
+        },
+        {
+            "codigo": "359eb60c-3741-3a44-11f4-0f61eb8e3dd6",
+            "periodo": "20220811135516",
+            "visita": "FBPDV-2022-679975",
+            "finished": "11/08/2022 14:02:56",
+            "rede": "COELHO DINIZ",
+            "pdv": "COELHO DINIZ DEODORO DA FONSECA - LOJA 19",
+            "cliente": "CASTELODOCAFE-462",
+            "promotor": "ADAIR FLORENCIO DA SILVA",
+            "produto": "CAFE SALOMAO MAOS DE FADA CAPSULA C/10",
+            "tipoOcorrencia": "Vencimento menor que 90 dias",
+            "quantidade": "54",
+            "vencimento": "14/10/2022",
+            "precoVarejo": "27,99",
+            "precoAtacado": "27,99",
+            "local": "No Ponto Natural",
+            "acao": "Permaneceu no Ponto Natural"
+        }
+    ]
+}
+        console.log("Valores: ", valores);
+
+        function getData(items, filters) {
+            var periodos = {};
+            var headers  = ['ID', 'DATA', 'CLIENTE', 'PROMOTOR', 'REDE', 'LOJA', 'PRODUTO', 'QDTE', 'VENC', 'OCORRÊNCIA', 'LOCAL', 'AÇÃO', 'PRECO ATACADO', 'PRECO VAREJO'];
+            var grouper = {};
+
+            var dtInit = new Date(new Date().getTime()+(0*0*0*0*0000)).getTime();
+            var dtEnd  = new Date(new Date().getTime()+(90*24*60*60*1000)).getTime();
+            
+
+            items.multiregisters.forEach(function(kpi) {
+                if(filters['data'] === undefined || filters['data'] === kpi.produto){
+
+                if(kpi.vencimento !== ''){
+                    var date = kpi.vencimento.split('/');
+                    var dd   = date[0];
+                    var MM   = date[1];
+                    var yyyy = date[2].substring(0,4);
+                    var vencimento = new Date(yyyy, parseInt(MM)-1, dd).getTime();
+
+                
+                    if(dtInit < vencimento && dtEnd > vencimento){
+
+                    if(Object.keys(grouper).length === 0){
+                        grouper.details = {};
+                    }
+
+                    var key = kpi.pdv +'-'+ kpi.produto +'-'+ vencimento;
+
+                    if(!grouper[key] || grouper[key].vencimento < vencimento){
+                        grouper[key] = { vencimento: vencimento, kpi: kpi }; 
+                    }
+
+                    var detail = [kpi._id, kpi._ref, kpi.cliente, kpi.promotor, kpi.rede, kpi.pdv, kpi.produto, kpi.quantidade, kpi.vencimento, kpi.tipoOcorrencia, kpi.local, kpi.acao, kpi.precoAtacado, kpi.precoVarejo];
+                            
+                    if(grouper.details[vencimento]){
+                        grouper.details[vencimento].push(detail);
+
+                    }else{
+                        grouper.details[vencimento] = [detail];
+                    }
+
+                }
+
+            }
+        }
+        });
+        Object.keys(grouper).forEach(function(item) { 
+            if(item !== 'details'){
+            var group = grouper[item];
+            var key = group.vencimento;
+            var kpi = group.kpi;
+            
+            var periodo = periodos[key] || { 
+                name: kpi.vencimento,
+                quantidade: 0,
+                details: grouper.details[key],
+                sort: key 
+            };
+            
+            if (!!kpi.quantidade.trim()) {
+                periodo.quantidade += parseInt(kpi.quantidade);
+            }
+            periodos[key] = periodo;
+            }
+        });
+        var items = Object.keys(periodos).map(function(key) { return periodos[key]; }).sort(function (o1, o2) { return o1.sort - o2.sort; });
+        var labels = [];
+        var series = ['Quantidade'];
+        var config = [];
+        var data = [];
+        var colors = ['#e84444'];
+        var details = [];
+
+                    
+        for(var index in items) {
+            var periodo = items[index];
+            labels.push(periodo.name);
+            config.push({ color : colors[0], display: true, id: index, position: 'left', type: 'linear' });
+            data.push(periodo.quantidade);
+        details.push([periodo.details]);
+        }   
+            return {
+                config: config,
+                data: data,
+                labels: labels,
+                series: series,
+                headers: headers,
+                details: details,
+                colors: colors
+            };
+        }
+        
+       //var chart = getChart();
+        //var params = getParams();
+        //var data = getData(valores, "params.filters");
+
+        //console.log("data: ", data);
+
+
+        var dtInit = new Date(new Date().getTime()).getTime();
+        var dtEnd  = new Date(new Date().getTime()+(90*24*60*60*1000)).getTime();
+        console.log("dtInit: ", dtInit);
+
+        console.log("dtEnd: ", dtEnd);
+        // return {
+        //     id: chart.Id,
+        //     name: chart.Name,
+        //     perspective: 'ExecutedAt',
+        //     title: chart.Title,
+        //     description: 'Indicador de Data Crítica',
+        //     type: 'Line',
+        //     data: data,
+        //     colors: data.colors,
+        //     options: {
+        //         scales: {
+        //             yAxes: [{
+        //                 stacked: true
+        //             }]
+        //         }
+        //     }
+        // };
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

@@ -1,0 +1,1174 @@
+<html>
+    <head>
+        <title>POC - Select alterar class div</title>
+        <link rel="stylesheet" type="text/css" href="http://primebuilder.com.br/Frontend/Content/StyleSheets/smoothness/jquery-ui-1.7.3.custom.css">
+        <link rel="stylesheet" type="text/css" href="http://primebuilder.com.br/Frontend/Scripts/fancybox/jquery.fancybox-1.3.4.css" media="screen">
+        <link rel="stylesheet" type="text/css" href="http://primebuilder.com.br/Frontend/Scripts/bootstrap/css/bootstrap.css">
+        <link rel="stylesheet" type="text/css" href="http://primebuilder.com.br/Frontend/Scripts/superfish/css/superfish.css" media="screen">
+        <link rel="stylesheet" type="text/css" href="http://primebuilder.com.br/Frontend/Content/form/form.css">
+        <link rel="stylesheet" type="text/css" href="http://primebuilder.com.br/Frontend/Content/form/theme.css">
+        <link rel="stylesheet" type="text/css" href="http://primebuilder.com.br/Frontend/Content/InfrastructureDashboardCSS.css">
+        <link rel="stylesheet" type="text/css" href="http://primebuilder.com.br/Frontend/Content/Report.css?cache_=05122017082444">
+        <link rel="shortcut icon" href="http://primebuilder.com.br/Frontend/ContentPB/Images/Orange/ico-osmobile-favico.png"><link rel="stylesheet" type="text/css" href="http://primebuilder.com.br/Frontend/Content/Normal.css" id="display-mode-css">
+        <link rel="stylesheet" type="text/css" href="http://primebuilder.com.br/Frontend/Content/token-input-facebook.css">
+        <link rel="stylesheet" type="text/css" href="http://primebuilder.com.br/Frontend/Content/osmobile-diagramation.css?cache_=05122017082445">
+        <link rel="stylesheet" type="text/css" href="http://primebuilder.com.br/Frontend/Content/StyleSheets/top-fixed-menu-save.css?cache_=05122017082445">
+        <link rel="stylesheet" type="text/css" href="http://primebuilder.com.br/Frontend/Content/Skin/blue/color.css?cache_=05122017082444">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+        
+        <style>
+            .exibe{
+                color: blue;
+                display: block;
+            }
+            .naoExibe {
+                color: green;
+                display: none;
+            }
+            
+     
+        </style>
+    </head>
+    <body>
+        <script>
+            function changeFunc($valor){
+                //var div1 = document.getElementsByName("accordion-body.in.collapse");
+                var elementos = document.getElementsByClassName("accordion-body in collapse");
+                for (var i = 0; i < elementos.length; i++) {
+                    elementos[i].className = "naoExibe";
+                }
+                
+                //alert(elementos.length);
+                
+                //div1[0].className = ".accordion-body collapse";
+                
+                //fluxoVisivel[1].style.className("accordion-body collapse");
+                //alert($valor);
+                window.location.href =  $valor;
+                var div = document.querySelector($valor);
+
+                div.className= "accordion-body in collapse";
+               //$(el).is(":visible");
+               // if (document.getElementById($valor))
+               // {
+               //    var div = document.getElementById($valor);
+               //    div.className= 'exibe';
+                   
+               // }else
+               // {
+               //    var div = document.getElementById($valor);
+                   //div.style.class= 'block';    
+                //}  
+                /* if (div.style.display == 'none'){
+                    alert('Disponivel');
+                }else{
+                   alert('Não disponivel'); 
+                } */
+            }
+        </script>
+
+        <table class="gridTable">
+            <tbody>
+                <tr>
+                    <td colspan="4">
+                        <h3>Empresas que compartilham estas integrações</h3>
+                    </td>
+                </tr>
+            
+                <tr class="gridTableHeader">
+                    <th>Empresa</th>
+                    <th>Assinatura</th>
+                    <th>Nome</th>
+                    <th class="center-collumn"></th>
+                </tr>
+                
+                <tr class="gridTableRowOdd">
+                    <td><span class="badge">2724</span></td>
+                    <td> <b>2175f94d-b070-34ef-2d5e-4bbd32960250 </b></td>
+                    <td> <b>Microcity Computadores e Sistemas LTDA </b></td>
+                    <td></td>
+                </tr>
+                
+                <tr class="gridTableRowEven">
+                    <td><span class="badge">2915</span></td>
+                    <td> 8b77af36-7f82-25ac-94e4-453e031787f6 </td>
+                    <td> Microcity (HOMOLOGAÇÃO) </td>
+                    <td></td>
+                </tr>
+            
+            </tbody>
+        </table>
+        <table class="gridTable">
+            <tbody>
+                <tr>
+                    <td>
+                        <h3>Fluxos de Trabalho:</h3>
+                        <select id="link"  onchange="changeFunc(value);">
+                            <option value="" >Escolha a categoria</option>
+                            <option value="#filterBody-4dec44be-4d61-8941-8efa-e64903c29348">Fluxo Caixa Seguradora (V2)</option>
+                            <option value="#filterBody-400a554f-464a-eb99-ed81-308cf0d5c8c3">Ativação - Fluxo Padrão (v2)</option>
+                            <option value="#filterBody-ed01868d-03a6-2a3b-3038-62dd2c710794">Ativação - Fluxo Pague Menos (V2)</option>
+                            <option value="#filterBody-a82dba6f-a643-3f2d-7aed-c3fa4e381d9d">Atendimentos (V3) - (Incidentes e Solicitações de Serviços)</option>
+                        </select>
+                    </td>
+                </tr>
+            
+            <tr class="gridTableRowEven">
+                <td>
+                    <div class="accordion-group">
+                        <div class="accordion-heading">
+                            <a class="accordion-toggle" style="display: contents" id="filter-title" data-toggle="collapse" data-parent="#filterArea" href="#filterBody-4dec44be-4d61-8941-8efa-e64903c29348">
+                                <table class="gridTable">
+                                    <tbody><tr>
+                                        <td>
+                                            <h5 class="work-flow-name">ativacao_fluxo_caixa_seguradora_v2 - Ativação - Fluxo Caixa Seguradora (V2)</h5>
+                                        </td>
+                                    </tr>
+                                </tbody></table>
+                            </a>
+                        </div>
+                        <div class="accordion-body collapse" id="filterBody-4dec44be-4d61-8941-8efa-e64903c29348">
+                            <table class="gridTable gridMonitor">
+                                <tbody>
+                                    <tr>
+                                        <td style="width: 20px;"></td>
+                                        <td>
+                                            <b>Integração</b>
+                                        </td>
+                                        <td>
+                                            <b>Tipo de Serviço</b>
+                                        </td>
+                                        <td>
+                                            <b>Algoritmo de Integração</b>
+                                        </td>
+                                        <td>
+                                            <b>Ativo</b>
+                                            </td>
+                                    </tr>
+                                                            
+                                    <tr>
+                                        <td class="expand" style="width: 20px;">
+                                            <i class="material-icons" style="cursor: pointer" id="img_config_4dec44be-4d61-8941-8efa-e64903c29348_snakhya-microcity-prd" onclick="document.toggleConfiguration('config_4dec44be-4d61-8941-8efa-e64903c29348_snakhya-microcity-prd');">more_horiz</i>
+                                        </td>
+                                        <td>
+                                            snakhya-microcity-prd
+                                        </td>
+                                        <td>
+                                            rest
+                                        </td>
+                                        <td>
+                                            javascript
+                                        </td>
+                                        <td>
+                                            <i class="material-icons">
+                                                check
+                                            </i>
+                                            </td>
+                                    </tr>
+                                    <tr class="" id="config_4dec44be-4d61-8941-8efa-e64903c29348_snakhya-microcity-prd" style="display: none;">
+                                        <td colspan="5">
+                                            <form>
+                                                <fieldset>
+                                                    <section>
+                                                        <label style="">Tentativas:</label>
+                                                        <div style="">
+                                                                4
+                                                        </div>
+                                                        </section>
+                                                        <section>
+                                                            <label style="">Intervalo:</label>
+                                                        <div style="">
+                                                            00:01:00
+                                                        </div>
+                                                    </section>
+                                                    <section>
+                                                        <label style="">
+                                                            Tipo de Autenticação
+                                                        </label>
+                                                        <div style="">
+                                                            <span>None</span>
+                                                        </div>
+                                                    </section>
+                            
+                                                    <section>
+                                                        <label style="">
+                                                            Url Base
+                                                        </label>
+                                                        <div style="">
+                                                            <span>https://tv.microcity.com.br:8443/mge/service.sbr</span>
+                                                        </div>
+                                                    </section>
+                                                    <section>
+                                                        <label style="">
+                                                            Tipo de Conteúdo
+                                                        </label>
+                                                        <div style="">
+                                                            <span>application/json</span>
+                                                        </div>
+                                                    </section>
+                                                    <section>
+                                                        <p style="margin: 10px; border: none">
+                                                            <a class="btn btn-primary" href="/Frontend/pbi/Monitoring/2e91d13f-b057-4ebb-947e-1c4514a5a937?workspace=2724&amp;integration=4dec44be-4d61-8941-8efa-e64903c29348&amp;configuration=snakhya-microcity-prd" role="button" aria-expanded="false">Logs</a>
+                                                        </p>
+                                                    </section>
+                                                </fieldset>
+                                            </form>
+                                        </td>
+                                    </tr> 
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </td>
+            </tr>
+            <tr class="gridTableRowEven">
+                                            <td>
+                                                <div class="accordion-group">
+                                                    <div class="accordion-heading">
+                                                        <a class="accordion-toggle" style="display: contents" id="filter-title" data-toggle="collapse" data-parent="#filterArea" href="#filterBody-400a554f-464a-eb99-ed81-308cf0d5c8c3">
+                                                            <table class="gridTable">
+                                                                <tbody><tr>
+                                                                    <td>
+                                                                        <h5 class="work-flow-name">ativacao_fluxo_padrao_v2 - Ativação - Fluxo Padrão (v2)</h5>
+                                                                    </td>
+                                                                </tr>
+                                                            </tbody></table>
+                            </a>
+                        </div>
+                        <div class="accordion-body collapse" id="filterBody-400a554f-464a-eb99-ed81-308cf0d5c8c3">
+                            <table class="gridTable gridMonitor">
+                                <tbody>
+                                    <tr>
+                                        <td style="width: 20px;"></td>
+                                        <td>
+                                            <b>Integração</b>
+                                        </td>
+                                        <td>
+                                            <b>Tipo de Serviço</b>
+                                        </td>
+                                        <td>
+                                            <b>Algoritmo de Integração</b>
+                                        </td>
+                                        <td>
+                                            <b>Ativo</b>
+                                        </td>
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="expand" style="width: 20px;">
+                                            <i class="material-icons" style="cursor: pointer" id="img_config_400a554f-464a-eb99-ed81-308cf0d5c8c3_snakhya-microcity-prd" onclick="document.toggleConfiguration('config_400a554f-464a-eb99-ed81-308cf0d5c8c3_snakhya-microcity-prd');">more_horiz
+                                            </i>
+                                        </td>
+                                        <td>
+                                            snakhya-microcity-prd
+                                        </td>
+                                        <td>
+                                            rest
+                                        </td>
+                                        <td>
+                                            javascript
+                                        </td>
+                                        <td>
+                                            <i class="material-icons">
+                                                check
+                                            </i>
+                                        </td>
+                                    </tr>
+                                    <tr class="" id="config_400a554f-464a-eb99-ed81-308cf0d5c8c3_snakhya-microcity-prd" style="display: none;">
+                                        <td colspan="5">
+                                            <form>
+                                                <fieldset>
+                                                    <section>
+                                                        <label style="">Tentativas:</label>
+                                                        <div style="">
+                                                            4
+                                                        </div>
+                                                    </section>
+                                                    <section>
+                                                        <label style="">Intervalo:</label>
+                                                        <div style="">
+                                                            00:01:00
+                                                        </div>
+                                                    </section>
+                                                    
+    
+    <section>
+        <label style="">
+            Tipo de Autenticação
+        </label>
+        <div style="">
+            <span>None</span>
+        </div>
+    </section>
+    
+    <section>
+        <label style="">
+            Url Base
+        </label>
+        <div style="">
+            <span>https://tv.microcity.com.br:8443/mge/service.sbr</span>
+        </div>
+    </section>
+    <section>
+        <label style="">
+            Tipo de Conteúdo
+        </label>
+        <div style="">
+            <span>application/json</span>
+        </div>
+    </section>
+    <section>
+        
+        <p style="margin: 10px; border: none">
+    
+            <a class="btn btn-primary" href="/Frontend/pbi/Monitoring/2e91d13f-b057-4ebb-947e-1c4514a5a937?workspace=2724&amp;integration=400a554f-464a-eb99-ed81-308cf0d5c8c3&amp;configuration=snakhya-microcity-prd" role="button" aria-expanded="false">Logs
+            </a>
+        </p>
+    </section>
+    
+    
+                                                </fieldset>
+                                            </form>
+                                        </td>
+                                    </tr>
+                                    
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </td>
+            </tr>
+            
+            <tr class="gridTableRowEven">
+                <td>
+                    <div class="accordion-group">
+                        <div class="accordion-heading">
+                            <a class="accordion-toggle" style="display: contents" id="filter-title" data-toggle="collapse" data-parent="#filterArea" href="#filterBody-ed01868d-03a6-2a3b-3038-62dd2c710794">
+                                <table class="gridTable">
+                                    <tbody><tr>
+                                        <td>
+                                            <h5 class="work-flow-name">ativacao_fluxo_pague_menos_v2 - Ativação - Fluxo Pague Menos (V2)</h5>
+                                        </td>
+                                    </tr>
+                                </tbody></table>
+                            </a>
+                        </div>
+                        <div class="accordion-body collapse" id="filterBody-ed01868d-03a6-2a3b-3038-62dd2c710794">
+                            <table class="gridTable gridMonitor">
+                                <tbody>
+                                    <tr>
+                                        <td style="width: 20px;"></td>
+                                        <td>
+                                            <b>Integração</b>
+                                        </td>
+                                        <td>
+                                            <b>Tipo de Serviço</b>
+                                        </td>
+                                        <td>
+                                            <b>Algoritmo de Integração</b>
+                                        </td>
+                                        <td>
+                                            <b>Ativo</b>
+                                        </td>
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="expand" style="width: 20px;">
+                                            <i class="material-icons" style="cursor: pointer" id="img_config_ed01868d-03a6-2a3b-3038-62dd2c710794_snakhya-microcity-prd" onclick="document.toggleConfiguration('config_ed01868d-03a6-2a3b-3038-62dd2c710794_snakhya-microcity-prd');">more_horiz
+                                            </i>
+                                        </td>
+                                        <td>
+                                            snakhya-microcity-prd
+                                        </td>
+                                        <td>
+                                            rest
+                                        </td>
+                                        <td>
+                                            javascript
+                                        </td>
+                                        <td>
+                                            <i class="material-icons">
+                                                check
+                                            </i>
+                                        </td>
+                                    </tr>
+                                    <tr class="" id="config_ed01868d-03a6-2a3b-3038-62dd2c710794_snakhya-microcity-prd" style="display: none;">
+                                        <td colspan="5">
+                                            <form>
+                                                <fieldset>
+                                                    <section>
+                                                        <label style="">Tentativas:</label>
+                                                        <div style="">
+                                                            4
+                                                        </div>
+                                                    </section>
+                                                    <section>
+                                                        <label style="">Intervalo:</label>
+                                                        <div style="">
+                                                            00:01:00
+                                                        </div>
+                                                    </section>
+                                                    
+    
+    <section>
+        <label style="">
+            Tipo de Autenticação
+        </label>
+        <div style="">
+            <span>None</span>
+        </div>
+    </section>
+    
+    <section>
+        <label style="">
+            Url Base
+        </label>
+        <div style="">
+            <span>https://tv.microcity.com.br:8443/mge/service.sbr</span>
+        </div>
+    </section>
+    <section>
+        <label style="">
+            Tipo de Conteúdo
+        </label>
+        <div style="">
+            <span>application/json</span>
+        </div>
+    </section>
+    <section>
+        
+        <p style="margin: 10px; border: none">
+    
+            <a class="btn btn-primary" href="/Frontend/pbi/Monitoring/2e91d13f-b057-4ebb-947e-1c4514a5a937?workspace=2724&amp;integration=ed01868d-03a6-2a3b-3038-62dd2c710794&amp;configuration=snakhya-microcity-prd" role="button" aria-expanded="false">Logs
+            </a>
+        </p>
+    </section>
+    
+    
+                                                </fieldset>
+                                            </form>
+                                        </td>
+                                    </tr>
+                                    
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </td>
+            </tr>
+            
+            <tr class="gridTableRowEven">
+                <td>
+                    <div class="accordion-group">
+                        <div class="accordion-heading">
+                            <a class="accordion-toggle" style="display: contents" id="filter-title" data-toggle="collapse" data-parent="#filterArea" href="#filterBody-a82dba6f-a643-3f2d-7aed-c3fa4e381d9d">
+                                <table class="gridTable">
+                                    <tbody><tr>
+                                        <td>
+                                            <h5 class="work-flow-name">atendimento_v3 - Atendimentos (V3) - (Incidentes e Solicitações de Serviços)</h5>
+                                        </td>
+                                    </tr>
+                                </tbody></table>
+                            </a>
+                        </div>
+                        <div class="accordion-body collapse" id="filterBody-a82dba6f-a643-3f2d-7aed-c3fa4e381d9d">
+                            <table class="gridTable gridMonitor">
+                                <tbody>
+                                    <tr>
+                                        <td style="width: 20px;"></td>
+                                        <td>
+                                            <b>Integração</b>
+                                        </td>
+                                        <td>
+                                            <b>Tipo de Serviço</b>
+                                        </td>
+                                        <td>
+                                            <b>Algoritmo de Integração</b>
+                                        </td>
+                                        <td>
+                                            <b>Ativo</b>
+                                        </td>
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="expand" style="width: 20px;">
+                                            <i class="material-icons" style="cursor: pointer" id="img_config_a82dba6f-a643-3f2d-7aed-c3fa4e381d9d_mctycasm-d-app" onclick="document.toggleConfiguration('config_a82dba6f-a643-3f2d-7aed-c3fa4e381d9d_mctycasm-d-app');">more_horiz
+                                            </i>
+                                        </td>
+                                        <td>
+                                            mctycasm-d-app
+                                        </td>
+                                        <td>
+                                            rest
+                                        </td>
+                                        <td>
+                                            javascript
+                                        </td>
+                                        <td>
+                                            <i class="material-icons">
+                                                check
+                                            </i>
+                                        </td>
+                                    </tr>
+                                    <tr class="" id="config_a82dba6f-a643-3f2d-7aed-c3fa4e381d9d_mctycasm-d-app" style="display: none;">
+                                        <td colspan="5">
+                                            <form>
+                                                <fieldset>
+                                                    <section>
+                                                        <label style="">Tentativas:</label>
+                                                        <div style="">
+                                                            2
+                                                        </div>
+                                                    </section>
+                                                    <section>
+                                                        <label style="">Intervalo:</label>
+                                                        <div style="">
+                                                            00:00:00
+                                                        </div>
+                                                    </section>
+                                                    
+    
+    <section>
+        <label style="">
+            Tipo de Autenticação
+        </label>
+        <div style="">
+            <span>None</span>
+        </div>
+    </section>
+    
+    <section>
+        <label style="">
+            Url Base
+        </label>
+        <div style="">
+            <span>http://wscasdm.microcity.com.br:8050/caisd-rest</span>
+        </div>
+    </section>
+    <section>
+        <label style="">
+            Tipo de Conteúdo
+        </label>
+        <div style="">
+            <span>application/json</span>
+        </div>
+    </section>
+    <section>
+        
+        <p style="margin: 10px; border: none">
+    
+            <a class="btn btn-primary" href="/Frontend/pbi/Monitoring/2e91d13f-b057-4ebb-947e-1c4514a5a937?workspace=2724&amp;integration=a82dba6f-a643-3f2d-7aed-c3fa4e381d9d&amp;configuration=mctycasm-d-app" role="button" aria-expanded="false">Logs
+            </a>
+        </p>
+    </section>
+    
+    
+                                                </fieldset>
+                                            </form>
+                                        </td>
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="expand" style="width: 20px;">
+                                            <i class="material-icons" style="cursor: pointer" id="img_config_a82dba6f-a643-3f2d-7aed-c3fa4e381d9d_MCTYCASM-D-APP - HOMOLOG" onclick="document.toggleConfiguration('config_a82dba6f-a643-3f2d-7aed-c3fa4e381d9d_MCTYCASM-D-APP - HOMOLOG');">more_horiz
+                                            </i>
+                                        </td>
+                                        <td>
+                                            MCTYCASM-D-APP - HOMOLOG
+                                        </td>
+                                        <td>
+                                            rest
+                                        </td>
+                                        <td>
+                                            javascript
+                                        </td>
+                                        <td>
+                                            <i class="material-icons">
+                                                check
+                                            </i>
+                                        </td>
+                                    </tr>
+                                    <tr class="" id="config_a82dba6f-a643-3f2d-7aed-c3fa4e381d9d_MCTYCASM-D-APP - HOMOLOG" style="display: none;">
+                                        <td colspan="5">
+                                            <form>
+                                                <fieldset>
+                                                    <section>
+                                                        <label style="">Tentativas:</label>
+                                                        <div style="">
+                                                            2
+                                                        </div>
+                                                    </section>
+                                                    <section>
+                                                        <label style="">Intervalo:</label>
+                                                        <div style="">
+                                                            00:00:00
+                                                        </div>
+                                                    </section>
+                                                    
+    
+    <section>
+        <label style="">
+            Tipo de Autenticação
+        </label>
+        <div style="">
+            <span>None</span>
+        </div>
+    </section>
+    
+    <section>
+        <label style="">
+            Url Base
+        </label>
+        <div style="">
+            <span>http://wscasdmhml.microcity.com.br:8060/caisd-rest</span>
+        </div>
+    </section>
+    <section>
+        <label style="">
+            Tipo de Conteúdo
+        </label>
+        <div style="">
+            <span>application/xml</span>
+        </div>
+    </section>
+    <section>
+        
+        <p style="margin: 10px; border: none">
+    
+            <a class="btn btn-primary" href="/Frontend/pbi/Monitoring/2e91d13f-b057-4ebb-947e-1c4514a5a937?workspace=2724&amp;integration=a82dba6f-a643-3f2d-7aed-c3fa4e381d9d&amp;configuration=MCTYCASM-D-APP%20-%20HOMOLOG" role="button" aria-expanded="false">Logs
+            </a>
+        </p>
+    </section>
+    
+    
+                                                </fieldset>
+                                            </form>
+                                        </td>
+                                    </tr>
+                                    
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </td>
+            </tr>
+            
+            <tr class="gridTableRowEven">
+                <td>
+                    <div class="accordion-group">
+                        <div class="accordion-heading">
+                            <a class="accordion-toggle" style="display: contents" id="filter-title" data-toggle="collapse" data-parent="#filterArea" href="#filterBody-2cf3cfd1-5377-6ce7-37f0-63775b824dc4">
+                                <table class="gridTable">
+                                    <tbody><tr>
+                                        <td>
+                                            <h5 class="work-flow-name">ATIVACAO-VLI - Ativação VLI - Versão 2</h5>
+                                        </td>
+                                    </tr>
+                                </tbody></table>
+                            </a>
+                        </div>
+                        <div class="accordion-body collapse" id="filterBody-2cf3cfd1-5377-6ce7-37f0-63775b824dc4">
+                            <table class="gridTable gridMonitor">
+                                <tbody>
+                                    <tr>
+                                        <td style="width: 20px;"></td>
+                                        <td>
+                                            <b>Integração</b>
+                                        </td>
+                                        <td>
+                                            <b>Tipo de Serviço</b>
+                                        </td>
+                                        <td>
+                                            <b>Algoritmo de Integração</b>
+                                        </td>
+                                        <td>
+                                            <b>Ativo</b>
+                                        </td>
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="expand" style="width: 20px;">
+                                            <i class="material-icons" style="cursor: pointer" id="img_config_2cf3cfd1-5377-6ce7-37f0-63775b824dc4_SNAKHYA-MICROCITY-PRD" onclick="document.toggleConfiguration('config_2cf3cfd1-5377-6ce7-37f0-63775b824dc4_SNAKHYA-MICROCITY-PRD');">more_horiz
+                                            </i>
+                                        </td>
+                                        <td>
+                                            SNAKHYA-MICROCITY-PRD
+                                        </td>
+                                        <td>
+                                            rest
+                                        </td>
+                                        <td>
+                                            javascript
+                                        </td>
+                                        <td>
+                                            <i class="material-icons">
+                                                check
+                                            </i>
+                                        </td>
+                                    </tr>
+                                    <tr class="" id="config_2cf3cfd1-5377-6ce7-37f0-63775b824dc4_SNAKHYA-MICROCITY-PRD" style="display: none;">
+                                        <td colspan="5">
+                                            <form>
+                                                <fieldset>
+                                                    <section>
+                                                        <label style="">Tentativas:</label>
+                                                        <div style="">
+                                                            4
+                                                        </div>
+                                                    </section>
+                                                    <section>
+                                                        <label style="">Intervalo:</label>
+                                                        <div style="">
+                                                            00:01:00
+                                                        </div>
+                                                    </section>
+                                                    
+    
+    <section>
+        <label style="">
+            Tipo de Autenticação
+        </label>
+        <div style="">
+            <span>None</span>
+        </div>
+    </section>
+    
+    <section>
+        <label style="">
+            Url Base
+        </label>
+        <div style="">
+            <span>https://tv.microcity.com.br:8443/mge/service.sbr</span>
+        </div>
+    </section>
+    <section>
+        <label style="">
+            Tipo de Conteúdo
+        </label>
+        <div style="">
+            <span>application/json</span>
+        </div>
+    </section>
+    <section>
+        
+        <p style="margin: 10px; border: none">
+    
+            <a class="btn btn-primary" href="/Frontend/pbi/Monitoring/2e91d13f-b057-4ebb-947e-1c4514a5a937?workspace=2724&amp;integration=2cf3cfd1-5377-6ce7-37f0-63775b824dc4&amp;configuration=SNAKHYA-MICROCITY-PRD" role="button" aria-expanded="false">Logs
+            </a>
+        </p>
+    </section>
+    
+    
+                                                </fieldset>
+                                            </form>
+                                        </td>
+                                    </tr>
+                                    
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </td>
+            </tr>
+            
+            <tr class="gridTableRowEven">
+                <td>
+                    <div class="accordion-group">
+                        <div class="accordion-heading">
+                            <a class="accordion-toggle" style="display: contents" id="filter-title" data-toggle="collapse" data-parent="#filterArea" href="#filterBody-ad95cb4a-3f6a-b83c-1b0d-ad50293ade7c">
+                                <table class="gridTable">
+                                    <tbody><tr>
+                                        <td>
+                                            <h5 class="work-flow-name">ATIVACAO_PADRAO_V3 - Fluxo Ativação Padrão - V3</h5>
+                                        </td>
+                                    </tr>
+                                </tbody></table>
+                            </a>
+                        </div>
+                        <div class="accordion-body collapse" id="filterBody-ad95cb4a-3f6a-b83c-1b0d-ad50293ade7c">
+                            <table class="gridTable gridMonitor">
+                                <tbody>
+                                    <tr>
+                                        <td style="width: 20px;"></td>
+                                        <td>
+                                            <b>Integração</b>
+                                        </td>
+                                        <td>
+                                            <b>Tipo de Serviço</b>
+                                        </td>
+                                        <td>
+                                            <b>Algoritmo de Integração</b>
+                                        </td>
+                                        <td>
+                                            <b>Ativo</b>
+                                        </td>
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="expand" style="width: 20px;">
+                                            <i class="material-icons" style="cursor: pointer" id="img_config_ad95cb4a-3f6a-b83c-1b0d-ad50293ade7c_SNAKHYA-MICROCITY-PRD" onclick="document.toggleConfiguration('config_ad95cb4a-3f6a-b83c-1b0d-ad50293ade7c_SNAKHYA-MICROCITY-PRD');">more_horiz
+                                            </i>
+                                        </td>
+                                        <td>
+                                            SNAKHYA-MICROCITY-PRD
+                                        </td>
+                                        <td>
+                                            rest
+                                        </td>
+                                        <td>
+                                            javascript
+                                        </td>
+                                        <td>
+                                            <i class="material-icons">
+                                                check
+                                            </i>
+                                        </td>
+                                    </tr>
+                                    <tr class="" id="config_ad95cb4a-3f6a-b83c-1b0d-ad50293ade7c_SNAKHYA-MICROCITY-PRD" style="display: none;">
+                                        <td colspan="5">
+                                            <form>
+                                                <fieldset>
+                                                    <section>
+                                                        <label style="">Tentativas:</label>
+                                                        <div style="">
+                                                            4
+                                                        </div>
+                                                    </section>
+                                                    <section>
+                                                        <label style="">Intervalo:</label>
+                                                        <div style="">
+                                                            00:01:00
+                                                        </div>
+                                                    </section>
+                                                    
+    
+    <section>
+        <label style="">
+            Tipo de Autenticação
+        </label>
+        <div style="">
+            <span>None</span>
+        </div>
+    </section>
+    
+    <section>
+        <label style="">
+            Url Base
+        </label>
+        <div style="">
+            <span>https://tv.microcity.com.br:8443/mge/service.sbr</span>
+        </div>
+    </section>
+    <section>
+        <label style="">
+            Tipo de Conteúdo
+        </label>
+        <div style="">
+            <span>application/json</span>
+        </div>
+    </section>
+    <section>
+        
+        <p style="margin: 10px; border: none">
+    
+            <a class="btn btn-primary" href="/Frontend/pbi/Monitoring/2e91d13f-b057-4ebb-947e-1c4514a5a937?workspace=2724&amp;integration=ad95cb4a-3f6a-b83c-1b0d-ad50293ade7c&amp;configuration=SNAKHYA-MICROCITY-PRD" role="button" aria-expanded="false">Logs
+            </a>
+        </p>
+    </section>
+    
+    
+                                                </fieldset>
+                                            </form>
+                                        </td>
+                                    </tr>
+                                    
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </td>
+            </tr>
+            
+            <tr class="gridTableRowEven">
+                <td>
+                    <div class="accordion-group">
+                        <div class="accordion-heading">
+                            <a class="accordion-toggle" style="display: contents" id="filter-title" data-toggle="collapse" data-parent="#filterArea" href="#filterBody-4416a1da-6a5f-df42-1811-9827a4833977">
+                                <table class="gridTable">
+                                    <tbody><tr>
+                                        <td>
+                                            <h5 class="work-flow-name">ativacao_fluxo_pague_menos_v3 - Ativação Pague Menos - V3</h5>
+                                        </td>
+                                    </tr>
+                                </tbody></table>
+                            </a>
+                        </div>
+                        <div class="accordion-body collapse" id="filterBody-4416a1da-6a5f-df42-1811-9827a4833977">
+                            <table class="gridTable gridMonitor">
+                                <tbody>
+                                    <tr>
+                                        <td style="width: 20px;"></td>
+                                        <td>
+                                            <b>Integração</b>
+                                        </td>
+                                        <td>
+                                            <b>Tipo de Serviço</b>
+                                        </td>
+                                        <td>
+                                            <b>Algoritmo de Integração</b>
+                                        </td>
+                                        <td>
+                                            <b>Ativo</b>
+                                        </td>
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="expand" style="width: 20px;">
+                                            <i class="material-icons" style="cursor: pointer" id="img_config_4416a1da-6a5f-df42-1811-9827a4833977_SNAKHYA-MICROCITY-PRD" onclick="document.toggleConfiguration('config_4416a1da-6a5f-df42-1811-9827a4833977_SNAKHYA-MICROCITY-PRD');">more_horiz
+                                            </i>
+                                        </td>
+                                        <td>
+                                            SNAKHYA-MICROCITY-PRD
+                                        </td>
+                                        <td>
+                                            rest
+                                        </td>
+                                        <td>
+                                            javascript
+                                        </td>
+                                        <td>
+                                            <i class="material-icons">
+                                                check
+                                            </i>
+                                        </td>
+                                    </tr>
+                                    <tr class="" id="config_4416a1da-6a5f-df42-1811-9827a4833977_SNAKHYA-MICROCITY-PRD" style="display: none;">
+                                        <td colspan="5">
+                                            <form>
+                                                <fieldset>
+                                                    <section>
+                                                        <label style="">Tentativas:</label>
+                                                        <div style="">
+                                                            4
+                                                        </div>
+                                                    </section>
+                                                    <section>
+                                                        <label style="">Intervalo:</label>
+                                                        <div style="">
+                                                            00:01:00
+                                                        </div>
+                                                    </section>
+                                                    
+    
+    <section>
+        <label style="">
+            Tipo de Autenticação
+        </label>
+        <div style="">
+            <span>None</span>
+        </div>
+    </section>
+    
+    <section>
+        <label style="">
+            Url Base
+        </label>
+        <div style="">
+            <span>https://tv.microcity.com.br:8443/mge/service.sbr</span>
+        </div>
+    </section>
+    <section>
+        <label style="">
+            Tipo de Conteúdo
+        </label>
+        <div style="">
+            <span>application/json</span>
+        </div>
+    </section>
+    <section>
+        
+        <p style="margin: 10px; border: none">
+    
+            <a class="btn btn-primary" href="/Frontend/pbi/Monitoring/2e91d13f-b057-4ebb-947e-1c4514a5a937?workspace=2724&amp;integration=4416a1da-6a5f-df42-1811-9827a4833977&amp;configuration=SNAKHYA-MICROCITY-PRD" role="button" aria-expanded="false">Logs
+            </a>
+        </p>
+    </section>
+    
+    
+                                                </fieldset>
+                                            </form>
+                                        </td>
+                                    </tr>
+                                    
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </td>
+            </tr>
+            
+            <tr class="gridTableRowEven">
+                <td>
+                    <div class="accordion-group">
+                        <div class="accordion-heading">
+                            <a class="accordion-toggle" style="display: contents" id="filter-title" data-toggle="collapse" data-parent="#filterArea" href="#filterBody-96149dea-1c3a-49db-da8c-a8278b95b8f5">
+                                <table class="gridTable">
+                                    <tbody><tr>
+                                        <td>
+                                            <h5 class="work-flow-name">ativacao_fluxo_caixa_seguradora_v3 - Ativação Caixa Seguradora - V3</h5>
+                                        </td>
+                                    </tr>
+                                </tbody></table>
+                            </a>
+                        </div>
+                        <div class="accordion-body collapse" id="filterBody-96149dea-1c3a-49db-da8c-a8278b95b8f5">
+                            <table class="gridTable gridMonitor">
+                                <tbody>
+                                    <tr>
+                                        <td style="width: 20px;"></td>
+                                        <td>
+                                            <b>Integração</b>
+                                        </td>
+                                        <td>
+                                            <b>Tipo de Serviço</b>
+                                        </td>
+                                        <td>
+                                            <b>Algoritmo de Integração</b>
+                                        </td>
+                                        <td>
+                                            <b>Ativo</b>
+                                        </td>
+                                    </tr>
+                                    
+                                    <tr>
+                                        <td class="expand" style="width: 20px;">
+                                            <i class="material-icons" style="cursor: pointer" id="img_config_96149dea-1c3a-49db-da8c-a8278b95b8f5_SNAKHYA-MICROCITY-PRD" onclick="document.toggleConfiguration('config_96149dea-1c3a-49db-da8c-a8278b95b8f5_SNAKHYA-MICROCITY-PRD');">more_horiz
+                                            </i>
+                                        </td>
+                                        <td>
+                                            SNAKHYA-MICROCITY-PRD
+                                        </td>
+                                        <td>
+                                            rest
+                                        </td>
+                                        <td>
+                                            javascript
+                                        </td>
+                                        <td>
+                                            <i class="material-icons">
+                                                check
+                                            </i>
+                                        </td>
+                                    </tr>
+                                    <tr class="" id="config_96149dea-1c3a-49db-da8c-a8278b95b8f5_SNAKHYA-MICROCITY-PRD" style="display: none;">
+                                        <td colspan="5">
+                                            <form>
+                                                <fieldset>
+                                                    <section>
+                                                        <label style="">Tentativas:</label>
+                                                        <div style="">
+                                                            4
+                                                        </div>
+                                                    </section>
+                                                    <section>
+                                                        <label style="">Intervalo:</label>
+                                                        <div style="">
+                                                            00:01:00
+                                                        </div>
+                                                    </section>
+                                                    
+    
+    <section>
+        <label style="">
+            Tipo de Autenticação
+        </label>
+        <div style="">
+            <span>None</span>
+        </div>
+    </section>
+    
+    <section>
+        <label style="">
+            Url Base
+        </label>
+        <div style="">
+            <span>https://tv.microcity.com.br:8443/mge/service.sbr</span>
+        </div>
+    </section>
+    <section>
+        <label style="">
+            Tipo de Conteúdo
+        </label>
+        <div style="">
+            <span>application/json</span>
+        </div>
+    </section>
+    <section>
+        
+        <p style="margin: 10px; border: none">
+    
+            <a class="btn btn-primary" href="/Frontend/pbi/Monitoring/2e91d13f-b057-4ebb-947e-1c4514a5a937?workspace=2724&amp;integration=96149dea-1c3a-49db-da8c-a8278b95b8f5&amp;configuration=SNAKHYA-MICROCITY-PRD" role="button" aria-expanded="false">Logs
+            </a>
+        </p>
+    </section>
+    
+    
+                                                </fieldset>
+                                            </form>
+                                        </td>
+                                    </tr>
+                                    
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </td>
+            </tr>
+            
+        </tbody></table>
+
+         <!-- <table>
+             <tr>
+                <th>Fluxos: </th>
+             </tr>
+             <tr>
+                 <td>
+                    <select id="link"  onchange="changeFunc(value);">
+
+                        <option value="" >Escolha a categoria</option>
+                        <option value="animais">Animais</option>
+                        <option value="natureza">Natureza</option>
+                        <option value="humanos">Humanos</option>
+                     </select> 
+                 </td>
+             </tr>
+         </table>
+        <div class='naoExibe' id='animais'>
+            <p>Animais</p>
+        </div> 
+        <div class='naoExibe' id='natureza'>
+            <p>Natureza</p>
+        </div> 
+        <div class='naoExibe'  id='humanos'>
+            <p>Humanos</p>
+        </div> 
+          <script>
+             function changeFunc($valor){
+                 alert($valor);
+                 //var div = document.getElementById($valor);
+                // div.style.display= 'none';
+                //$(el).is(":visible");
+                 if (document.getElementById($valor))
+                 {
+                    var div = document.getElementById($valor);
+                    div.className= 'exibe';
+                    
+                 }else
+                 {
+                    var div = document.getElementById($valor);
+                    //div.style.class= 'block';    
+                 }                    
+             }
+         </script> -->
+   </body>
+</html>

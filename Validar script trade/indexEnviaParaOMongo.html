@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Validar script trade.programafeedback.com.br</title>
+    <script>
+        var objec = {
+    "multiregisters": [
+        {
+            "visita": "FBPDV-2530648",
+            "rede": "SUPER NOSSO",
+            "cliente": "NATCROC-552",
+            "tipoPDV": "Canal Alimentar",
+            "pdv": "SUPER NOSSO VALE DO SERENO - LOJA 696",
+            "cnpjPDV": "10319375001063",
+            "codigo": "e6b075bc-cdcf-eb56-4a6d-07bfab9eec19",
+            "produto": "BISCOITO SALGADO POLVILHO LASQUITA NAT CROC PARMESAO COM PAPRICA PICANTE 40G",
+            "periodo": "20220517162906",
+            "rupturaGondola": true,
+            "ruptura": true
+        },
+        {
+            "visita": "FBPDV-2530648",
+            "rede": "SUPER NOSSO",
+            "cliente": "NATCROC-552",
+            "tipoPDV": "Canal Alimentar",
+            "pdv": "SUPER NOSSO VALE DO SERENO - LOJA 696",
+            "cnpjPDV": "10319375001063",
+            "codigo": "a3679e54-fd18-8058-1654-b391b5e31e09",
+            "produto": "BISCOITO SALGADO POLVILHO LASQUITA NAT CROC PROVOLONE E OREGANO 40G",
+            "periodo": "20220517162906",
+            "rupturaLoja": true,
+            "ruptura": true
+        },
+        {
+            "visita": "FBPDV-2530648",
+            "rede": "SUPER NOSSO",
+            "cliente": "NATCROC-552",
+            "tipoPDV": "Canal Alimentar",
+            "pdv": "SUPER NOSSO VALE DO SERENO - LOJA 696",
+            "cnpjPDV": "10319375001063",
+            "codigo": "ef32dac5-e594-f911-1a4f-4c9fde282a2d",
+            "produto": "BISCOITO SALGADO POLVILHO LASQUITA NAT CROC RICOTA DEFUMADA 40G",
+            "periodo": "20220517162906",
+            "rupturaGondola": true,
+            "ruptura": true
+        },
+        {
+            "visita": "FBPDV-2530648",
+            "rede": "SUPER NOSSO",
+            "cliente": "NATCROC-552",
+            "tipoPDV": "Canal Alimentar",
+            "pdv": "SUPER NOSSO VALE DO SERENO - LOJA 696",
+            "cnpjPDV": "10319375001063",
+            "codigo": "c6acab99-b6ee-863e-be4b-2be0873f6d00",
+            "produto": "BISCOITO SALGADO POLVILHO LASQUITA NAT CROC TOMATE SECO E MANJERICAO 40G",
+            "periodo": "20220517162906",
+            "rupturaLoja": true,
+            "ruptura": true
+        }
+    ]
+};
+
+obj = objec.multiregisters;
+        objAnterior = objec.multiregisters;
+        var filters = {
+            data: undefined,
+            DimensionTime: 1,
+            EndDate: '2022-06-01T02:59:59.999Z',
+            PeriodType: 'Personal',
+            Product: '',
+            StartDate: '2022-05-01T03:00:00.000Z'
+        };
+
+        
+
+        function getData(obj, filters) {
+        var caixas = 0
+        obj.forEach(function (kpi) {
+            
+            if(filters['data'] === undefined || filters['data'] === kpi.produto){
+                
+                if (kpi.caixas) {
+                    console.log('entrei no if');
+                    caixas += parseInt(kpi.caixas); 
+                }
+            }
+        });
+
+        return {
+            value: caixas
+        };
+        }
+
+        var chart = "getChart()";
+        var params = "getParams()";
+
+        var current = getData(obj, filters);
+        console.log('current: ', current);
+        var before = getData( objAnterior , filters);
+        console.log('before: ', before);
+        var style, icon;
+
+        if (before.value > current.value) {
+        icon = 'trending_down';
+        style = 'text-danger';
+        } else {
+        style = 'text-success';
+        icon = 'trending_up';
+        }
+
+        console.log('Return: ', {
+        id: chart.Id,
+        name: chart.Name,
+        perspective: 'ExecutedAt',
+        title: chart.Title,
+        type: 'Panel',
+        data: {
+            group: 'DEPOIS DO ATENDIMENTO',
+            details: {
+            style: 'text-primary-black',
+            text: 'Periodo Anterior: ' + before.value,
+            },
+            graph: {
+            icon: {
+                name: icon,
+                style: style
+            },
+            style: 'text-danger',
+            value: current.value
+            },
+            'title': {
+            style: 'text-primary-black',
+            text: chart.Title
+            }
+        },
+        description: 'Número de caixas de abastecimento.'
+        });
+
+            
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

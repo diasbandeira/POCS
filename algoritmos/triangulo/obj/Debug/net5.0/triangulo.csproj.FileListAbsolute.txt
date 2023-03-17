@@ -1,0 +1,16 @@
+D:\Dev\Pocs\algoritmos\triangulo\obj\Debug\net5.0\triangulo.csproj.AssemblyReference.cache
+D:\Dev\Pocs\algoritmos\triangulo\obj\Debug\net5.0\triangulo.GeneratedMSBuildEditorConfig.editorconfig
+D:\Dev\Pocs\algoritmos\triangulo\obj\Debug\net5.0\triangulo.AssemblyInfoInputs.cache
+D:\Dev\Pocs\algoritmos\triangulo\obj\Debug\net5.0\triangulo.AssemblyInfo.cs
+D:\Dev\Pocs\algoritmos\triangulo\obj\Debug\net5.0\triangulo.csproj.CoreCompileInputs.cache
+D:\Dev\Pocs\algoritmos\triangulo\bin\Debug\net5.0\triangulo.exe
+D:\Dev\Pocs\algoritmos\triangulo\bin\Debug\net5.0\triangulo.deps.json
+D:\Dev\Pocs\algoritmos\triangulo\bin\Debug\net5.0\triangulo.runtimeconfig.json
+D:\Dev\Pocs\algoritmos\triangulo\bin\Debug\net5.0\triangulo.runtimeconfig.dev.json
+D:\Dev\Pocs\algoritmos\triangulo\bin\Debug\net5.0\triangulo.dll
+D:\Dev\Pocs\algoritmos\triangulo\bin\Debug\net5.0\ref\triangulo.dll
+D:\Dev\Pocs\algoritmos\triangulo\bin\Debug\net5.0\triangulo.pdb
+D:\Dev\Pocs\algoritmos\triangulo\obj\Debug\net5.0\triangulo.dll
+D:\Dev\Pocs\algoritmos\triangulo\obj\Debug\net5.0\ref\triangulo.dll
+D:\Dev\Pocs\algoritmos\triangulo\obj\Debug\net5.0\triangulo.pdb
+D:\Dev\Pocs\algoritmos\triangulo\obj\Debug\net5.0\triangulo.genruntimeconfig.cache

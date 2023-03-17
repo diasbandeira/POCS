@@ -1,0 +1,6 @@
+D:\Dev\Pocs\microServicos\microserviceMongoDB\MicroservicesMongoDB\microservicesMongoDB\obj\Debug\net5.0\catalogo.API.csproj.AssemblyReference.cache
+D:\Dev\Pocs\microServicos\microserviceMongoDB\MicroservicesMongoDB\microservicesMongoDB\obj\Debug\net5.0\catalogo.API.GeneratedMSBuildEditorConfig.editorconfig
+D:\Dev\Pocs\microServicos\microserviceMongoDB\MicroservicesMongoDB\microservicesMongoDB\obj\Debug\net5.0\catalogo.API.AssemblyInfoInputs.cache
+D:\Dev\Pocs\microServicos\microserviceMongoDB\MicroservicesMongoDB\microservicesMongoDB\obj\Debug\net5.0\catalogo.API.AssemblyInfo.cs
+D:\Dev\Pocs\microServicos\microserviceMongoDB\MicroservicesMongoDB\microservicesMongoDB\obj\Debug\net5.0\catalogo.API.csproj.CoreCompileInputs.cache
+D:\Dev\Pocs\microServicos\microserviceMongoDB\MicroservicesMongoDB\microservicesMongoDB\obj\Debug\net5.0\catalogo.API.MvcApplicationPartsAssemblyInfo.cache

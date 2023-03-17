@@ -1,0 +1,29 @@
+var tarefas = [
+    {
+        "_index": "service_requests.e109c7a7-5665-a917-2136-596c4bebb458.2022.08",
+        "_type": "servicerequest",
+        "_id": "94692852-02f3-3a7a-950b-4a9a445e3bd4",
+        "_score": 7.6032324,
+        "_source": {
+            "uID": 86572436
+        }
+    },
+    {
+        "_index": "service_requests.0f0c3d20-5337-40ab-b7d5-7a2bcaef73eb.2022.08",
+        "_type": "servicerequest",
+        "_id": "64879bf0-9f14-4269-127a-90ff32577829",
+        "_score": 7.3605275,
+        "_source": {
+            "uID": 86562078
+        }
+    },
+    {
+        "_index": "service_requests.633050dd-60ef-ebf6-09b2-ea16583e80af.2022.08",
+        "_type": "servicerequest",
+        "_id": "089f5905-1c69-ba7d-262c-28968b27a103",
+        "_score": 3.871201,
+        "_source": {
+            "uID": 86572448
+        }
+    }
+]
