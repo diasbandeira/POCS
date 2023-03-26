@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="./bootstrap.css"/>
+    <script type="text/javascript" src="./jquery-1.7.2.min.js" ></script>
+
+</head>
+<body>
+    <script type="text/javascript">
+        $(".btn-add").live("click", function () {
+            addItem();
+        });
+
+        function addItem(){
+            var ids = $("#ListSelect").val();
+            console.log(ids);
+            addLine($('#ListSelected option:selected').val(), $('#ListSelect option:selected').text());
+            
+        }
+
+        function addLine(key, value){
+            if(key != "" && value != ""){
+                var additionalFieldTBody = $('#gridRelationship > tbody:last');
+                additionalFieldTBody.append('<tr><td>teste</td><td>teste</td></tr>');
+
+            } 
+
+        }
+    </script>
+    <form>
+        <fieldset>
+            <section>
+                <label>
+                    <h6>Nome</h6>
+                    <section>
+                        <select id="ListSelect">
+                            <option value="1">teste 1</option>
+                            <option value="2">teste 2</option>
+                            <option value="3">teste 3</option>
+                            <option value="4">teste 4</option>
+                            <option value="5">teste 5</option>
+                        </select>
+                        <a class="btn btn-add"><i class="icon-plus"></i></a>
+                    </section>
+                </label>
+            </section>
+            <div id="resutsArea">
+                <div id="results">
+                    <table id="gridRelationship" class="gridTable">
+                        <tr class="gridTableHeader">
+                            <th style="width: 70px"> Codigo</th>
+                            <th style="width: 70px"> Nome</th>
+                            <th style="width: 70px"> Frequencia</th>
+                            <th style="width: 70px"> Remove</th>
+                        </tr>
+                        <tr class="gridTableRowEven">
+                            <td><span class="badge"> Nome</span></td>
+                            <td> Nome</td>
+                            <td > 2</td>
+                            <td class="action-collumn"><a class="btn btn-remove" > <i class="icon-minus"></i></a></td>
+                        </tr>
+
+                    </table>
+                </div>
+
+            </div>
+        </fieldset>
+    </form>
+    
+</body>
+</html>

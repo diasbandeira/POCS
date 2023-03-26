@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Calculadora</title>
+	<style>
+		body {
+			font-family: Arial, sans-serif;
+		}
+		
+		#calculator {
+			border: 1px solid #ccc;
+			padding: 10px;
+			width: 200px;
+		}
+		
+		input[type="button"] {
+			background-color: #4CAF50;
+			border: none;
+			color: white;
+			padding: 10px;
+			text-align: center;
+			text-decoration: none;
+			display: inline-block;
+			font-size: 16px;
+			margin: 4px 2px;
+			cursor: pointer;
+			width: 45%;
+		}
+		
+		input[type="text"] {
+			width: 100%;
+			padding: 10px;
+			margin-bottom: 5px;
+			border: 1px solid #ccc;
+			border-radius: 3px;
+			font-size: 16px;
+		}
+	</style>
+</head>
+<body>
+	<div id="calculator">
+		<input type="text" id="result" readonly>
+		<input type="button" value="7" onclick="addNumber('7')">
+		<input type="button" value="8" onclick="addNumber('8')">
+		<input type="button" value="9" onclick="addNumber('9')">
+		<input type="button" value="/" onclick="addOperator('/')">
+		<input type="button" value="4" onclick="addNumber('4')">
+		<input type="button" value="5" onclick="addNumber('5')">
+		<input type="button" value="6" onclick="addNumber('6')">
+		<input type="button" value="*" onclick="addOperator('*')">
+		<input type="button" value="1" onclick="addNumber('1')">
+		<input type="button" value="2" onclick="addNumber('2')">
+		<input type="button" value="3" onclick="addNumber('3')">
+		<input type="button" value="-" onclick="addOperator('-')">
+		<input type="button" value="0" onclick="addNumber('0')">
+		<input type="button" value="C" onclick="clearResult()">
+		<input type="button" value="=" onclick="calculate()">
+		<input type="button" value="+" onclick="addOperator('+')">
+	</div>
+	
+	<script>
+		let result = document.getElementById("result");
+		let expression = "";
+		
+		function addNumber(number) {
+			expression += number;
+			result.value = expression;
+		}
+		
+		function addOperator(operator) {
+			expression += operator;
+			result.value = expression;
+		}
+		
+		function clearResult() {
+			expression = "";
+			result.value = "";
+		}
+		
+		function calculate() {
+			try {
+				expression = eval(expression);
+				result.value = expression;
+			} catch (e) {
+				alert("Expressão inválida!");
+			}
+		}
+	</script>
+</body>
+</html>
