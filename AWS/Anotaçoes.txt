@@ -1,0 +1,101 @@
+Curso AWS Udemy: 
+https://www.udemy.com/course/aws-certified-developer-associate-dva-c01/
+conta: desenvolvimento@primesystems.com.br
+senha: urR9zy8:.Dj3LhR
+
+Acesso a conta AWS:
+email: diasbandeira@gmail.com
+senha: 5nt0LChw@
+
+02/02 - seção 1 ate Seção 3. topico 9.
+03/02 - ate Seção 4 IAM Policies Hands On.
+07/02 - Ate Seção 4 AWS CLI Hands On.
+08/02 - Ate Seção 5 AWS Budget Setup
+15/02 - Ate 32. Create an EC2 Instance EC2 User Dat to have website Hands ON.
+16/02 - ate 35; Security groups hands on.
+19/02 - Ate 39 How to ssh using windows 10. Falta configurar permissão.
+20/02 - Configuração do Putty
+21/02 - Ate EC2 Instance Roles Demo.
+22/02 - Ate EBS OverView.
+26/02 - Ate AMI OverView.
+27/02 - ate EBS Volumes Types. continuar anotaçoes
+28/02 - ate Amazon EFS
+29/02 - Ate Amazon EFS - Hands ON.
+01/03 - Ate High Availability and scalability
+04/03 - Ate application load Balancer ALB.
+05/03 - Ate Application Load Balancer - parte 1 
+07/03 - Ate Elastic Load Balancer GWLB.
+08/03 -  Elastic Load Balancer - SSL Certificates Hands ON.
+12/03 - Auto scaling groups ASG - OverView. ver mais uma vez.
+14/03 - Auto Scaling Hands On.
+18/03 - Auto Scaling Groups Scaling Policies.
+19/03 - Teste 4: High Availability e Scalability
+20/03 - RDS Read Replicas vs Multi AZ. Fazer resumo.
+21/03 - Amazon RDS Hands On
+22/03 - Amazon Aurora.
+25/03 - RDS Proxy
+27/03 - ElastiCache Hands On.
+28/03 - Elastic Strategies.
+01/04 - Teste 5 - RDS, Aurora, ElastiCache Quiz.
+03/04 - What is a DNS.
+04/04 - Route 53 - EC2 Setup.
+05/04 - Route 53 CNAME vc Alias.
+08/04 - Routing Policy - Latency.
+09/04 - Routing Policies Failover
+10/04 - Routing Policy - Traffic Flow - Geoproximity
+11/04- Teste 6: Route 53 Quiz
+15/04 - VPC
+17/04 - S3 Security: Bucket Policy Hands ON
+18/04 - S3 Replication - Hands On
+19/04 - AWS ECS - Instance Metadata.
+23/04 - AWS CLI with MFA.
+24/04 - AWS IAM, CLI e SDK Quiz.
+25/04 - S3 Event Notifications - Hands ON.
+26/04 - Amazon S3 Advanced Quiz
+30/04 - S3 CORS Hands On.
+02/05 - S3 Pre-signed URLS.
+07/05 - Amazon S3 Security Quiz
+09/05 - ALB e EC2 as a Origin. 304
+10/05 - CloudFront Signed URL Process 309,
+13/05 - CloudFront – Real Time Logs, 316
+15/05 - Amazon ECS – Data Volumes (EFS), 328
+16/05 - ECS Rolling Update – Min 100%, Max 150%, 334
+17/05 - ECS – Intercept Stopped Tasks using EventBridge, 339
+21/05 - Amazon ECS – Data Volumes (Bind Mounts), 344
+22/05 - Amazon ECR – Using AWS CLI 353
+23/05 - Amazon EKS Overview, 355
+24/05 - AWS Elastic Beanstalk, 359
+28/05 - Web Server Tier vs. Worker Tie, 365
+29/05 - Elastic Beanstalk Deployment Summary from AWS Doc, 374
+30/05 - Elastic Beanstalk Under the Hood,379
+04/06 - AWS CloudFormation, 384
+05/06 - CloudFormation – Outputs Cross-Stack, 408. (Somente leitura.)
+11/06 - AWS Integration & Messaging, 466
+12/06 - SQS Queue Access Policy, 477
+13/06 - Amazon SQS – Delay Queue, 483
+14/06 - SNS + SQS: Fan Out, 494
+20/06 - Kinesis Overview 500
+11/07 - Kinesis Producers, 505 
+17/07 - Kinesis Consumers – AWS Lambda, 511
+14/08 - Kinesis Data Streams vs Firehose, 522
+26/08 - Kinesis Data Analytics for Apache Flink, 524
+27/08 - Kinesis vs SQS ordering, 527
+28/08 - SQS vs SNS vs Kinesis, 528
+29/08 - Monitoring in AWS, 531
+30/08 - CloudWatch Custom Metrics, 534
+03/09 - CloudWatch Logs Subscriptions, 542
+04/09 - CloudWatch Unified Agent – Metrics, 545
+06/09 - CloudWatch Alarm: good to know, 551
+10/09 - CloudWatch Synthetics Canary Blueprints, 553
+11/09 - Amazon EventBridge – Resource-based Policy, 558
+12/09 - EventBridge – Multi-account Aggregation, 559
+16/09 - AWS X-Ray Troubleshooting, 567
+18/09 - X-Ray Custom Sampling Rules, 571
+19/19 - X-Ray Read APIs – continued, 573
+20/09 - ECS + X-Ray: Example Task Definition, 576
+23/09 - AWS Distro for OpenTelemetry, 578
+24/09 - CloudTrail Events Retention, 583
+26/09 - CloudTrail vs CloudWatch vs X-Ray, 586
+02/10 - Lambda Event Mapper Scaling, 614
+04/10 - Lambda layers, 637
+924569\n\nhttps://onedrive.live.com/?authkey=%21AJQJZdFIAlrIt9c&id=2CDE7D03296ADA39%21731&cid=2CDE7D03296ADA39\n\n\nNão\nSim\n\n\n\n\nNão\nNão\nNão
